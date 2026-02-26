@@ -1,0 +1,87 @@
+﻿Reading C:/modeltech64_10.7/tcl/vsim/pref.tcl
+
+# 10.7
+
+# do {C:\Users\Ali\OneDrive\Desktop\AssertionsAnalyzer\AssertionFailureAnalyzer\Designs\run_logs\questa\20260227_010123\design_40\run.do}
+# Model Technology ModelSim SE-64 vmap 10.7 Lib Mapping Utility 2017.12 Dec  7 2017
+# vmap work C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/run_logs/questa/20260227_010123/design_40/work 
+# Modifying C:/modeltech64_10.7/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+# Start time: 01:04:07 on Feb 27,2026
+# vlog -sv -vopt C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_40/src/design_40.v 
+# -- Compiling module design_40
+# 
+# Top level modules:
+# 	design_40
+# End time: 01:04:07 on Feb 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+# Start time: 01:04:07 on Feb 27,2026
+# vlog -sv -vopt C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_40/src/design_40_core.v 
+# -- Compiling module design_40_core
+# 
+# Top level modules:
+# 	design_40_core
+# End time: 01:04:07 on Feb 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+# Start time: 01:04:07 on Feb 27,2026
+# vlog -sv -vopt C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_40/src/design_40_ctrl.v 
+# -- Compiling module design_40_ctrl
+# 
+# Top level modules:
+# 	design_40_ctrl
+# End time: 01:04:07 on Feb 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+# Start time: 01:04:07 on Feb 27,2026
+# vlog -sv -vopt C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_40/tb/tb_design_40.sv 
+# -- Compiling module tb_design_40
+# 
+# Top level modules:
+# 	tb_design_40
+# End time: 01:04:07 on Feb 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish exit tb_design_40 -do "run -all; quit -f" 
+# Start time: 01:04:07 on Feb 27,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 10.7 Dec  7 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_design_40(fast)
+# run -all
+# ** Error: datapath mismatch
+#    Time: 55 ns Started: 55 ns  Scope: tb_design_40 File: C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_40/tb/tb_design_40.sv Line: 57
+# ** Error: datapath mismatch
+#    Time: 95 ns Started: 95 ns  Scope: tb_design_40 File: C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_40/tb/tb_design_40.sv Line: 57
+# ** Error: datapath mismatch
+#    Time: 135 ns Started: 135 ns  Scope: tb_design_40 File: C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_40/tb/tb_design_40.sv Line: 57
+# ** Error: datapath mismatch
+#    Time: 175 ns Started: 175 ns  Scope: tb_design_40 File: C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_40/tb/tb_design_40.sv Line: 57
+# ** Error: datapath mismatch
+#    Time: 215 ns Started: 215 ns  Scope: tb_design_40 File: C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_40/tb/tb_design_40.sv Line: 57
+# ** Error: datapath mismatch
+#    Time: 255 ns Started: 255 ns  Scope: tb_design_40 File: C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_40/tb/tb_design_40.sv Line: 57
+# ** Error: datapath mismatch
+#    Time: 295 ns Started: 295 ns  Scope: tb_design_40 File: C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_40/tb/tb_design_40.sv Line: 57
+# ** Error: datapath mismatch
+#    Time: 335 ns Started: 335 ns  Scope: tb_design_40 File: C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_40/tb/tb_design_40.sv Line: 57
+# ** Error: datapath mismatch
+#    Time: 375 ns Started: 375 ns  Scope: tb_design_40 File: C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_40/tb/tb_design_40.sv Line: 57
+# ** Error: datapath mismatch
+#    Time: 415 ns Started: 415 ns  Scope: tb_design_40 File: C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_40/tb/tb_design_40.sv Line: 57
+# ** Note: $finish    : C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_40/tb/tb_design_40.sv(41)
+#    Time: 475 ns  Iteration: 1  Instance: /tb_design_40
+# End time: 01:04:09 on Feb 27,2026, Elapsed time: 0:00:02
+# Errors: 10, Warnings: 0

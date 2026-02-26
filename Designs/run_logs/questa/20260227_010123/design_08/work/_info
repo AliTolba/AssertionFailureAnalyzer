@@ -1,0 +1,115 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs
+T_opt
+Z1 !s110 1772146914
+VQ]cRizmCobion_h:gV0i21
+04 12 4 work tb_design_08 fast 0
+=1-106530eafcac-69a0d0e2-2e4-4590
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+OL;O;10.7;67
+vdesign_08
+Z3 DXx6 sv_std 3 std 0 22 >9az<^>2ff9DAl3OFGaAf1
+R1
+!i10b 1
+!s100 k6GA<Xl0UN1oPNR=PKHi=0
+I`O>Jca=RiP8A5FCa3kHj42
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s105 design_08_v_unit
+S1
+R0
+Z5 w1772143287
+8C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_08/src/design_08.v
+FC:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_08/src/design_08.v
+L0 1
+Z6 OL;L;10.7;67
+r1
+!s85 0
+31
+Z7 !s108 1772146914.000000
+!s107 C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_08/src/design_08.v|
+!s90 -sv|-vopt|C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_08/src/design_08.v|
+!i113 0
+Z8 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vdesign_08_core
+R3
+R1
+!i10b 1
+!s100 N>FTbdH92>EFISU?RYYCD2
+IFS4k3Kd^LcJAXJO]A9C@B0
+R4
+!s105 design_08_core_v_unit
+S1
+R0
+R5
+8C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_08/src/design_08_core.v
+FC:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_08/src/design_08_core.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_08/src/design_08_core.v|
+!s90 -sv|-vopt|C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_08/src/design_08_core.v|
+!i113 0
+R8
+R2
+vdesign_08_ctrl
+R3
+R1
+!i10b 1
+!s100 AKLIz^Sm`=HiJaUd8eG911
+I6BIVB3lMLG2N7Dg=SozHK1
+R4
+!s105 design_08_ctrl_v_unit
+S1
+R0
+R5
+8C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_08/src/design_08_ctrl.v
+FC:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_08/src/design_08_ctrl.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_08/src/design_08_ctrl.v|
+!s90 -sv|-vopt|C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_08/src/design_08_ctrl.v|
+!i113 0
+R8
+R2
+vtb_design_08
+R3
+R1
+!i10b 1
+!s100 ZDB=CeBdO1caSES>]z9A63
+IIoj?6aWQfaUfNTWPgPd=g2
+R4
+!s105 tb_design_08_sv_unit
+S1
+R0
+R5
+8C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_08/tb/tb_design_08.sv
+FC:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_08/tb/tb_design_08.sv
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_08/tb/tb_design_08.sv|
+!s90 -sv|-vopt|C:/Users/Ali/OneDrive/Desktop/AssertionsAnalyzer/AssertionFailureAnalyzer/Designs/design_08/tb/tb_design_08.sv|
+!i113 0
+R8
+R2

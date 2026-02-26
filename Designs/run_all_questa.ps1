@@ -61,11 +61,18 @@ foreach ($dir in $designDirs) {
   $doPath = Join-Path $caseDir 'run.do'
   $logPath = Join-Path $caseDir 'run.log'
 
+  # convert paths to forward-slashes so Tcl doesn't interpret backslashes as escapes
   $do = @()
-  $do += "vlib $workDir"
-  $do += "vmap work $workDir"
-  foreach ($f in $srcFiles) { $do += ('vlog -sv "{0}"' -f $f.FullName) }
-  $do += ('vlog -sv "{0}"' -f $tbFile.FullName)
+  $safeWork = $workDir -replace '\\','/'
+  $do += "vlib $safeWork"
+  $do += "vmap work $safeWork"
+  foreach ($f in $srcFiles) {
+    $safePath = $f.FullName -replace '\\','/'
+    # explicitly enable optimization in case a default config uses -novopt
+    $do += ('vlog -sv -vopt "{0}"' -f $safePath)
+  }
+  $safeTb = $tbFile.FullName -replace '\\','/'
+  $do += ('vlog -sv -vopt "{0}"' -f $safeTb)
   $do += "vsim -c -onfinish exit $tbTop -do {run -all; quit -f}"
   $doText = $do -join "`r`n"
   $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
