@@ -67,7 +67,9 @@ foreach ($dir in $designDirs) {
   foreach ($f in $srcFiles) { $do += ('vlog -sv "{0}"' -f $f.FullName) }
   $do += ('vlog -sv "{0}"' -f $tbFile.FullName)
   $do += "vsim -c -onfinish exit $tbTop -do {run -all; quit -f}"
-  Set-Content -Path $doPath -Value ($do -join "`r`n") -Encoding UTF8
+  $doText = $do -join "`r`n"
+  $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+  [System.IO.File]::WriteAllText($doPath, $doText, $utf8NoBom)
 
   $out = & vsim -c -do $doPath 2>&1
   $out | Out-File -FilePath $logPath -Encoding utf8
