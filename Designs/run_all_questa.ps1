@@ -1,9 +1,25 @@
 param(
   [string]$Root = $PSScriptRoot,
+  [string]$RunTag = (Get-Date -Format 'yyyyMMdd_HHmmss'),
   [switch]$StopOnError
 )
 
 $ErrorActionPreference = 'Stop'
+
+$requiredCommands = @('vsim', 'vlog', 'vlib', 'vmap')
+$missingCommands = @()
+foreach ($cmd in $requiredCommands) {
+  if (-not (Get-Command $cmd -ErrorAction SilentlyContinue)) {
+    $missingCommands += $cmd
+  }
+}
+
+if ($missingCommands.Count -gt 0) {
+  Write-Host "Missing required tools in PATH: $($missingCommands -join ', ')" -ForegroundColor Red
+  Write-Host "Install/initialize Questa tools and ensure all commands are available before running this script." -ForegroundColor Yellow
+  exit 2
+}
+
 $designDirs = Get-ChildItem -Path $Root -Directory |
   Where-Object { $_.Name -match '^design_\d+$' } |
   Sort-Object Name
@@ -12,8 +28,11 @@ if (-not $designDirs) {
   Write-Error "No design_XX directories found under $Root"
 }
 
-$runRoot = Join-Path $Root 'run_logs\questa'
+$simRoot = Join-Path $Root 'run_logs\questa'
+$runRoot = Join-Path $simRoot $RunTag
 New-Item -ItemType Directory -Path $runRoot -Force | Out-Null
+
+Write-Host "Run directory: $runRoot"
 
 $pass = 0
 $fail = 0
@@ -45,8 +64,8 @@ foreach ($dir in $designDirs) {
   $do = @()
   $do += "vlib $workDir"
   $do += "vmap work $workDir"
-  foreach ($f in $srcFiles) { $do += "vlog -sv {\"$($f.FullName)\"}" }
-  $do += "vlog -sv {\"$($tbFile.FullName)\"}"
+  foreach ($f in $srcFiles) { $do += ('vlog -sv "{0}"' -f $f.FullName) }
+  $do += ('vlog -sv "{0}"' -f $tbFile.FullName)
   $do += "vsim -c -onfinish exit $tbTop -do {run -all; quit -f}"
   Set-Content -Path $doPath -Value ($do -join "`r`n") -Encoding UTF8
 
@@ -65,4 +84,5 @@ foreach ($dir in $designDirs) {
 
 Write-Host ""
 Write-Host "Summary: PASS=$pass FAIL=$fail TOTAL=$($pass + $fail)"
+Write-Host "Logs saved under: $runRoot"
 if ($fail -gt 0) { exit 1 } else { exit 0 }
